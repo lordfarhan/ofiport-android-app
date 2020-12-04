@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="no_space">0dp</dimen>
+  <dimen name="tiny_space">2dp</dimen>
+  <dimen name="small_space">4dp</dimen>
+  <dimen name="medium_space">8dp</dimen>
+  <dimen name="default_space">16dp</dimen>
+  <dimen name="large_space">32dp</dimen>
+  <dimen name="giant_space">48dp</dimen>
+  <dimen name="mega_space">64dp</dimen>
+
+  <dimen name="small_text_size">12sp</dimen>
+  <dimen name="medium_text_size">14sp</dimen>
+  <dimen name="default_text_size">16sp</dimen>
+  <dimen name="large_text_size">18sp</dimen>
+  <dimen name="extra_large_text_size">22sp</dimen>
+
+  <dimen name="card_default_height">48dp</dimen>
+  <dimen name="card_default_corner_radius">24dp</dimen>
+  <dimen name="card_default_elevation">6dp</dimen>
+
+  <dimen name="button_default_height">60dp</dimen>
+  <dimen name="button_default_corner_radius">24dp</dimen>
+
+  <dimen name="chip_tab_layout_height">30dp</dimen>
+
+  <dimen name="text_default_start_margin">24dp</dimen>
+
+  <dimen name="icon_16">16dp</dimen>
+  <dimen name="icon_24">24dp</dimen>
+  <dimen name="icon_36">36dp</dimen>
+  <dimen name="icon_48">48dp</dimen>
+  <dimen name="icon_64">64dp</dimen>
+</resources>

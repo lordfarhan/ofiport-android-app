@@ -4,15 +4,19 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".MainActivity">
+  android:background="@color/colorEmerald"
+  tools:context=".ui.SplashScreenActivity">
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
+  <ImageView
+    android:layout_width="220dp"
+    android:layout_height="220dp"
+    android:layout_gravity="center"
+    android:src="@drawable/img_pemuda_muhammadiyah"
+    app:elevation="@dimen/card_default_elevation"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
