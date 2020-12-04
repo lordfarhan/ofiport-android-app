@@ -44,7 +44,7 @@
 
       <TextView
         android:id="@+id/textView_landingBalanceTitle"
-        style="@style/TextAppearance.Body"
+        style="@style/TextAppearance.MaterialComponents.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/large_space"
@@ -86,7 +86,7 @@
 
           <TextView
             android:id="@+id/textView_quickActionTitle"
-            style="@style/TextAppearance.Subhead"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_default_start_margin"
@@ -136,7 +136,7 @@
 
                 <TextView
                   android:id="@+id/textView_overviewReport"
-                  style="@style/TextAppearance.Body"
+                  style="@style/TextAppearance.MaterialComponents.Body1"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="@dimen/medium_space"
@@ -182,7 +182,7 @@
 
                 <TextView
                   android:id="@+id/textView_createReport"
-                  style="@style/TextAppearance.Body"
+                  style="@style/TextAppearance.MaterialComponents.Body1"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_marginTop="@dimen/medium_space"
@@ -200,7 +200,7 @@
 
           <TextView
             android:id="@+id/textView_statisticsTitle"
-            style="@style/TextAppearance.Subhead"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_default_start_margin"
@@ -249,7 +249,7 @@
 
               <TextView
                 android:id="@+id/textView_incomeTitle"
-                style="@style/TextAppearance.Caption"
+                style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_space"
@@ -261,7 +261,7 @@
 
               <TextView
                 android:id="@+id/textView_income"
-                style="@style/TextAppearance.Body"
+                style="@style/TextAppearance.MaterialComponents.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/not_available_value"
@@ -272,7 +272,7 @@
 
               <TextView
                 android:id="@+id/textView_incomeMonth"
-                style="@style/TextAppearance.Caption"
+                style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorWhite"
@@ -320,7 +320,7 @@
 
               <TextView
                 android:id="@+id/textView_outcomeTitle"
-                style="@style/TextAppearance.Caption"
+                style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_space"
@@ -332,7 +332,7 @@
 
               <TextView
                 android:id="@+id/textView_outcome"
-                style="@style/TextAppearance.Body"
+                style="@style/TextAppearance.MaterialComponents.Body1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/not_available_value"
@@ -343,7 +343,7 @@
 
               <TextView
                 android:id="@+id/textView_outcomeMonth"
-                style="@style/TextAppearance.Caption"
+                style="@style/TextAppearance.AppCompat.Caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/landing_outcome"
@@ -358,7 +358,7 @@
 
           <TextView
             android:id="@+id/textView_recentTransactionTitle"
-            style="@style/TextAppearance.Subhead"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/text_default_start_margin"

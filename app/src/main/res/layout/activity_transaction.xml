@@ -32,7 +32,7 @@
 
         <TextView
           android:id="@+id/textView_actionBarTitle"
-          style="@style/TextAppearance.Body"
+          style="@style/TextAppearance.MaterialComponents.Body1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
@@ -55,7 +55,7 @@
 
         <TextView
           android:id="@+id/textView_typeTitle"
-          style="@style/TextAppearance.Body"
+          style="@style/TextAppearance.MaterialComponents.Body1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/default_space"
@@ -96,7 +96,7 @@
 
         <TextView
           android:id="@+id/textView_descriptionTitle"
-          style="@style/TextAppearance.Body"
+          style="@style/TextAppearance.MaterialComponents.Body1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/default_space"
@@ -134,7 +134,7 @@
 
         <TextView
           android:id="@+id/textView_amountTitle"
-          style="@style/TextAppearance.Body"
+          style="@style/TextAppearance.MaterialComponents.Body1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/default_space"
@@ -161,7 +161,7 @@
 
             <TextView
               android:id="@+id/textView_amount"
-              style="@style/TextAppearance.Body"
+              style="@style/TextAppearance.MaterialComponents.Body1"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="@dimen/default_space"
@@ -169,7 +169,7 @@
 
             <EditText
               android:id="@+id/editText_transactionAmount"
-              style="@style/TextAppearance.Body"
+              style="@style/TextAppearance.MaterialComponents.Body1"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_marginTop="@dimen/medium_space"
@@ -190,7 +190,7 @@
 
         <TextView
           android:id="@+id/textView_dateTitle"
-          style="@style/TextAppearance.Body"
+          style="@style/TextAppearance.MaterialComponents.Body1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="@dimen/default_space"
@@ -230,7 +230,7 @@
 
           <TextView
             android:id="@+id/textView_actionSave"
-            style="@style/TextAppearance.Body"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -251,7 +251,7 @@
 
           <TextView
             android:id="@+id/textView_actionDelete"
-            style="@style/TextAppearance.Body"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
