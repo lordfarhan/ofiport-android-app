@@ -22,7 +22,7 @@ abstract class AppDatabase : RoomDatabase() {
         synchronized(AppDatabase::class) {
           instance = Room.databaseBuilder(
             context.applicationContext,
-            AppDatabase::class.java, "pemudamu_db"
+            AppDatabase::class.java, "ofiport_db"
           )
 //            .fallbackToDestructiveMigration()
             .build()
