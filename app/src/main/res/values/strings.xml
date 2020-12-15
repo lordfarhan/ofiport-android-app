@@ -18,6 +18,10 @@
   <string name="transaction_amount">Jumlah</string>
   <string name="transaction_date">Tanggal</string>
 
+  <string name="transaction_income_create">Create Income Report</string>
+  <string name="transaction_expense">Create Expense Report</string>
+  <string name="report">Overview Report</string>
+
   <!--  Months-->
   <string name="january">Januari</string>
   <string name="february">Februari</string>

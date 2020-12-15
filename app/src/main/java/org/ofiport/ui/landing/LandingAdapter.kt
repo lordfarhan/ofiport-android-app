@@ -9,8 +9,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.ofiport.R
+import org.ofiport.activity.MainActivity
 import org.ofiport.data.Transaction
 import org.ofiport.databinding.ItemTransactionBinding
+import org.ofiport.fragment.LandingFragment
 import org.ofiport.helper.DateTimeHelper
 import org.ofiport.ui.transaction.TransactionActivity
 import java.text.NumberFormat
@@ -63,9 +65,9 @@ class LandingAdapter(private val context: Context) :
             TransactionActivity::class.java
           )
           intent.putExtra(TransactionActivity.TRANSACTION, transaction)
-          (context as LandingActivity).startActivityForResult(
+          (context as MainActivity).startActivityForResult(
             intent,
-            LandingActivity.UPDATE_REQUEST
+            MainActivity.UPDATE_REQUEST
           )
         }
       }
