@@ -10,7 +10,9 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/Theme.Ofiport">
-    <activity android:name=".activity.MainActivity"></activity>
+    <activity android:name=".activity.ExpenseActivity"></activity>
+    <activity android:name=".activity.IncomeActivity" />
+    <activity android:name=".activity.MainActivity" />
     <activity android:name=".ui.SplashScreenActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
