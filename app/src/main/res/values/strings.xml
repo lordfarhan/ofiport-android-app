@@ -47,4 +47,9 @@
   <string name="desc_title_home">Record your office finance down here</string>
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="profile_typeOfBusiness">Industry</string>
+  <string name="profile_emailAddress">office@bahanakarya.com</string>
+  <string name="profile_numOfEmployee">50 Employees</string>
+  <string name="profile_officeName">PT. Bahana Karya</string>
+  <string name="profile_pictureDescription">profile picture</string>
 </resources>
