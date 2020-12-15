@@ -4,19 +4,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@color/colorEmerald"
+  android:background="@drawable/splash_screen"
   tools:context=".ui.SplashScreenActivity">
-
-  <ImageView
-    android:layout_width="220dp"
-    android:layout_height="220dp"
-    android:layout_gravity="center"
-    android:src="@drawable/img_pemuda_muhammadiyah"
-    app:elevation="@dimen/card_default_elevation"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

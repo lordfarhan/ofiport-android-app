@@ -47,7 +47,6 @@ class LandingActivity : AppCompatActivity() {
     binding = DataBindingUtil.setContentView(this, R.layout.activity_landing)
     viewModel = ViewModelProvider(this).get(LandingViewModel::class.java)
 
-    sayGreeting()
 
     binding.apply {
       cardViewOverviewReport.setOnClickListener {
@@ -68,22 +67,6 @@ class LandingActivity : AppCompatActivity() {
         )
       }
 
-      cardViewIncome.setOnClickListener {
-        startActivity(
-          Intent(
-            this@LandingActivity,
-            StatisticActivity::class.java
-          )
-        )
-      }
-      cardViewOutcome.setOnClickListener {
-        startActivity(
-          Intent(
-            this@LandingActivity,
-            StatisticActivity::class.java
-          )
-        )
-      }
       adapter = LandingAdapter(this@LandingActivity)
       recyclerViewRecentTransaction.adapter = adapter
       recyclerViewRecentTransaction.addItemDecoration(
@@ -109,45 +92,8 @@ class LandingActivity : AppCompatActivity() {
           income += transaction.amount
         }
       }
-      binding.apply {
-        textViewLandingBalance.text =
-          String.format("Rp. %s", NumberFormat.getInstance().format(income - outcome))
-      }
     })
 
-    viewModel.getIncomeTransactions().observe(this, {
-      val incomeInMonth = viewModel.getTransactionsInMonth(it)
-      binding.apply {
-        textViewIncome.text = String.format(
-          "Rp. %s",
-          NumberFormat.getInstance().format(viewModel.getCurrencyAmount(incomeInMonth))
-        )
-        textViewIncomeMonth.text = String.format(
-          "%s %s",
-          DateTimeHelper.getMonth(
-            DateTimeHelper.getMonthFromTimestamp(DateTimeHelper.getCurrentTimestamp()).toInt()
-          ),
-          DateTimeHelper.getYearFromTimestamp(DateTimeHelper.getCurrentTimestamp())
-        )
-      }
-    })
-
-    viewModel.getOutcomeTransactions().observe(this, {
-      val outcomeInMonth = viewModel.getTransactionsInMonth(it)
-      binding.apply {
-        textViewOutcome.text = String.format(
-          "Rp. %s",
-          NumberFormat.getInstance().format(viewModel.getCurrencyAmount(outcomeInMonth))
-        )
-        textViewOutcomeMonth.text = String.format(
-          "%s %s",
-          DateTimeHelper.getMonth(
-            DateTimeHelper.getMonthFromTimestamp(DateTimeHelper.getCurrentTimestamp()).toInt()
-          ),
-          DateTimeHelper.getYearFromTimestamp(DateTimeHelper.getCurrentTimestamp())
-        )
-      }
-    })
   }
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -189,24 +135,5 @@ class LandingActivity : AppCompatActivity() {
     }
   }
 
-  private fun sayGreeting() {
-    val calendar: Calendar = Calendar.getInstance()
-    val hour: Int = calendar.get(Calendar.HOUR_OF_DAY)
-    binding.apply {
-      when (hour) {
-        in 4..9 -> {
-          imageViewLandingGreeting.setImageResource(R.drawable.img_sky_morning)
-        }
-        in 10..13 -> {
-          imageViewLandingGreeting.setImageResource(R.drawable.img_sky_afternoon)
-        }
-        in 14..17 -> {
-          imageViewLandingGreeting.setImageResource(R.drawable.img_sky_without_sun)
-        }
-        else -> {
-          imageViewLandingGreeting.setImageResource(R.drawable.img_sky_night)
-        }
-      }
-    }
-  }
 }
+

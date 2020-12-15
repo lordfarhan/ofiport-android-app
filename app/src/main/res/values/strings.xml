@@ -4,11 +4,11 @@
   <string name="landing_balance_title">Saldo Tersedia</string>
   <string name="landing_settings">Settings</string>
   <string name="landing_action_title">Aksi Cepat</string>
-  <string name="landing_overview_report">Lihat Laporan</string>
+  <string name="landing_overview_report">Income</string>
   <string name="landing_create_transaction">Buat Transaksi</string>
   <string name="landing_statistics_title">Statistik</string>
-  <string name="landing_income">Pemasukan</string>
-  <string name="landing_outcome">Pengeluaran</string>
+  <string name="landing_income">Income</string>
+  <string name="landing_outcome">Expand</string>
   <string name="landing_recent_transactions_title">Transaksi Terbaru</string>
 
   <string name="transaction_create">Buat Transaksi</string>
@@ -39,4 +39,8 @@
   <string name="action_export_all">Export Semua</string>
   <string name="action_export_this_month">Export Bulan Ini</string>
   <string name="action_delete">Hapus</string>
+  <string name="title_home">What do you need?</string>
+  <string name="desc_title_home">Record your office finance down here</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

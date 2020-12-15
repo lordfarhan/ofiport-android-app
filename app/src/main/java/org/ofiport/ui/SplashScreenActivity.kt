@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import org.ofiport.R
+import org.ofiport.activity.MainActivity
 import org.ofiport.ui.landing.LandingActivity
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -13,7 +14,7 @@ class SplashScreenActivity : AppCompatActivity() {
     setContentView(R.layout.activity_splash_screen)
 
     Handler().postDelayed({
-      startActivity(Intent(this, LandingActivity::class.java))
+      startActivity(Intent(this, MainActivity::class.java))
       finish()
     }, 1500)
   }

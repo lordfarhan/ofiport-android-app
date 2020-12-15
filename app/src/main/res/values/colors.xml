@@ -14,6 +14,7 @@
   <color name="colorWhite_20">#33FFFFFF</color>
   <color name="colorWhite_80">#CCFFFFFF</color>
   <color name="colorBlack">#000000</color>
+  <color name="colorDark">#474748</color>
   <color name="colorBlack_20">#33000000</color>
   <color name="colorSpringGreen">#00FA9A</color>
   <color name="colorChipBackground">#80D5D5D5</color>

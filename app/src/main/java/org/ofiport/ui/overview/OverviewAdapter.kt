@@ -42,21 +42,9 @@ class OverviewAdapter(private val context: Context) :
     fun bind(transaction: Transaction) {
       binding.apply {
         if (transaction.type == 0) {
-          cardViewTypeTransactionItem.setCardBackgroundColor(
-            ContextCompat.getColor(
-              context,
-              R.color.colorAlizarin_20
-            )
-          )
-          imageViewTypeTransactionItem.setImageResource(R.drawable.icons8_withdrawal_48)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_lineofficestaff)
         } else {
-          cardViewTypeTransactionItem.setCardBackgroundColor(
-            ContextCompat.getColor(
-              context,
-              R.color.colorEmerald_20
-            )
-          )
-          imageViewTypeTransactionItem.setImageResource(R.drawable.icons8_deposit_48)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_lineinvestation)
         }
 
         textViewDescriptionTransactionItem.text = transaction.description
