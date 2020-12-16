@@ -17,5 +17,4 @@ data class Transaction(
   var amount: Long,
   var createdAt: String,
   var updatedAt: String
-) : Serializable {
-}
+) : Serializable

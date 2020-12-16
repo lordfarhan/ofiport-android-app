@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import org.ofiport.R
-import org.ofiport.activity.MainActivity
 import org.ofiport.ui.landing.LandingActivity
+import org.ofiport.util.SPLASH_SCREEN_DELAY_MILIS
 
 class SplashScreenActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,8 +14,8 @@ class SplashScreenActivity : AppCompatActivity() {
     setContentView(R.layout.activity_splash_screen)
 
     Handler().postDelayed({
-      startActivity(Intent(this, MainActivity::class.java))
+      startActivity(Intent(this, LandingActivity::class.java))
       finish()
-    }, 1500)
+    }, SPLASH_SCREEN_DELAY_MILIS)
   }
 }

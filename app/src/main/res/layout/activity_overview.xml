@@ -29,12 +29,11 @@
           app:tint="@color/colorTextDark" />
 
         <TextView
-          style="@style/TextAppearance.MaterialComponents.Body1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:text="@string/landing_overview_report"
-          tools:text="Overview Report" />
+          android:text="@string/monthly_report"
+          android:textSize="@dimen/large_text_size" />
 
         <ImageView
           android:id="@+id/imageView_actionOption"
@@ -80,10 +79,10 @@
 
           <TextView
             android:id="@+id/textView_month"
-            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize="@dimen/default_text_size"
             tools:text="Januari 2020" />
 
           <ImageView
@@ -114,10 +113,10 @@
       android:layout_height="wrap_content"
       android:layout_gravity="end|bottom"
       android:layout_margin="@dimen/default_space"
-      android:contentDescription="Export"
+      android:contentDescription="@string/action_export_this_month"
       android:src="@drawable/ic_baseline_arrow_forward"
-      android:tint="@color/colorWhite"
-      app:backgroundTint="@color/colorPrimary" />
+      app:backgroundTint="@color/colorPrimary"
+      app:tint="@color/design_default_color_on_primary" />
 
   </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

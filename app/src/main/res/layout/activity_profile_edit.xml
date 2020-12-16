@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:custom="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
 
   <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -35,8 +34,9 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
+          android:text="@string/profile"
           android:textSize="@dimen/large_text_size"
-          tools:text="Create Report" />
+          tools:text="Profile" />
 
       </FrameLayout>
 
@@ -54,64 +54,20 @@
         android:paddingBottom="@dimen/default_space">
 
         <TextView
-          android:id="@+id/textView_typeTitle"
+          android:id="@+id/textView_officeNameTitle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginStart="@dimen/text_default_start_margin"
           android:layout_marginTop="@dimen/default_space"
           android:layout_marginEnd="@dimen/default_space"
           android:layout_marginBottom="@dimen/default_space"
-          android:text="@string/transaction_type"
+          android:text="@string/profile_name"
           android:textSize="@dimen/default_text_size"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
-          android:id="@+id/cardView_type"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/default_space"
-          android:layout_marginTop="@dimen/medium_space"
-          android:layout_marginEnd="@dimen/default_space"
-          app:cardCornerRadius="@dimen/default_space"
-          app:cardElevation="@dimen/card_default_elevation"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/textView_typeTitle">
-
-          <org.ofiport.customview.toggle.ToggleSwitch
-            android:id="@+id/toggleSwitch_type"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/card_default_height"
-            android:gravity="center"
-            android:textSize="@dimen/default_text_size"
-            custom:activeBgColor="@color/colorPrimary"
-            custom:activeTextColor="@color/colorWhite"
-            custom:cornerRadius="@dimen/default_space"
-            custom:inactiveBgColor="@color/colorWhite"
-            custom:inactiveTextColor="@color/colorTextLight"
-            custom:separatorColor="@android:color/transparent"
-            custom:textToggleLeft="@string/landing_outcome"
-            custom:textToggleRight="@string/landing_income"
-            custom:toggleHeight="@dimen/card_default_height"
-            custom:toggleWidth="120dp" />
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-          android:id="@+id/textView_descriptionTitle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/text_default_start_margin"
-          android:layout_marginTop="@dimen/default_space"
-          android:layout_marginEnd="@dimen/default_space"
-          android:layout_marginBottom="@dimen/default_space"
-          android:text="@string/transaction_description"
-          android:textSize="@dimen/default_text_size"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/cardView_type" />
-
-        <androidx.cardview.widget.CardView
-          android:id="@+id/cardView_description"
+          android:id="@+id/cardView_officeName"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginStart="@dimen/default_space"
@@ -119,10 +75,175 @@
           android:layout_marginEnd="@dimen/default_space"
           app:cardCornerRadius="@dimen/default_space"
           app:cardElevation="@dimen/card_default_elevation"
-          app:layout_constraintTop_toBottomOf="@id/textView_descriptionTitle">
+          app:layout_constraintTop_toBottomOf="@id/textView_officeNameTitle">
 
           <EditText
-            android:id="@+id/editText_transactionDescription"
+            android:id="@+id/editText_officeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:layout_marginBottom="@dimen/medium_space"
+            android:background="@null"
+            android:gravity="top"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:minLines="1"
+            android:padding="@dimen/medium_space"
+            android:textSize="@dimen/default_text_size"
+            tools:hint="" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+          android:id="@+id/textView_officeEmailTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/text_default_start_margin"
+          android:layout_marginTop="@dimen/default_space"
+          android:layout_marginEnd="@dimen/default_space"
+          android:layout_marginBottom="@dimen/default_space"
+          android:text="@string/profile_email"
+          android:textSize="@dimen/default_text_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cardView_officeName" />
+
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardView_officeEmail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_space"
+          android:layout_marginTop="@dimen/medium_space"
+          android:layout_marginEnd="@dimen/default_space"
+          app:cardCornerRadius="@dimen/default_space"
+          app:cardElevation="@dimen/card_default_elevation"
+          app:layout_constraintTop_toBottomOf="@id/textView_officeEmailTitle">
+
+          <EditText
+            android:id="@+id/editText_officeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:layout_marginBottom="@dimen/medium_space"
+            android:background="@null"
+            android:gravity="top"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:minLines="1"
+            android:padding="@dimen/medium_space"
+            android:textSize="@dimen/default_text_size"
+            tools:hint="" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+          android:id="@+id/textView_industryTypeTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/text_default_start_margin"
+          android:layout_marginTop="@dimen/default_space"
+          android:layout_marginEnd="@dimen/default_space"
+          android:layout_marginBottom="@dimen/default_space"
+          android:text="@string/profile_industry"
+          android:textSize="@dimen/default_text_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cardView_officeEmail" />
+
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardView_industryType"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_space"
+          android:layout_marginTop="@dimen/medium_space"
+          android:layout_marginEnd="@dimen/default_space"
+          app:cardCornerRadius="@dimen/default_space"
+          app:cardElevation="@dimen/card_default_elevation"
+          app:layout_constraintTop_toBottomOf="@id/textView_industryTypeTitle">
+
+          <EditText
+            android:id="@+id/editText_industryType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:layout_marginBottom="@dimen/medium_space"
+            android:background="@null"
+            android:gravity="top"
+            android:inputType="text"
+            android:lines="1"
+            android:minLines="1"
+            android:padding="@dimen/medium_space"
+            android:textSize="@dimen/default_text_size"
+            tools:hint="" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+          android:id="@+id/textView_employeeAmountTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/text_default_start_margin"
+          android:layout_marginTop="@dimen/default_space"
+          android:layout_marginEnd="@dimen/default_space"
+          android:layout_marginBottom="@dimen/default_space"
+          android:text="@string/profile_employee"
+          android:textSize="@dimen/default_text_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cardView_industryType" />
+
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardView_employeeAmount"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_space"
+          android:layout_marginTop="@dimen/medium_space"
+          android:layout_marginEnd="@dimen/default_space"
+          app:cardCornerRadius="@dimen/default_space"
+          app:cardElevation="@dimen/card_default_elevation"
+          app:layout_constraintTop_toBottomOf="@id/textView_employeeAmountTitle">
+
+          <EditText
+            android:id="@+id/editText_employeeAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_space"
+            android:layout_marginBottom="@dimen/medium_space"
+            android:background="@null"
+            android:digits="0123456789"
+            android:gravity="top"
+            android:inputType="number"
+            android:lines="1"
+            android:minLines="1"
+            android:padding="@dimen/medium_space"
+            android:textSize="@dimen/default_text_size"
+            tools:hint="" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+          android:id="@+id/textView_officeAddressTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/text_default_start_margin"
+          android:layout_marginTop="@dimen/default_space"
+          android:layout_marginEnd="@dimen/default_space"
+          android:layout_marginBottom="@dimen/default_space"
+          android:text="@string/profile_address"
+          android:textSize="@dimen/default_text_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/cardView_employeeAmount" />
+
+        <androidx.cardview.widget.CardView
+          android:id="@+id/cardView_officeAddress"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_space"
+          android:layout_marginTop="@dimen/medium_space"
+          android:layout_marginEnd="@dimen/default_space"
+          app:cardCornerRadius="@dimen/default_space"
+          app:cardElevation="@dimen/card_default_elevation"
+          app:layout_constraintTop_toBottomOf="@id/textView_officeAddressTitle">
+
+          <EditText
+            android:id="@+id/editText_officeAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_space"
@@ -138,97 +259,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-          android:id="@+id/textView_amountTitle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/text_default_start_margin"
-          android:layout_marginTop="@dimen/default_space"
-          android:layout_marginEnd="@dimen/default_space"
-          android:layout_marginBottom="@dimen/default_space"
-          android:text="@string/transaction_amount"
-          android:textSize="@dimen/default_text_size"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/cardView_description" />
-
-        <androidx.cardview.widget.CardView
-          android:id="@+id/cardView_amount"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/default_space"
-          android:layout_marginTop="@dimen/medium_space"
-          android:layout_marginEnd="@dimen/default_space"
-          app:cardCornerRadius="@dimen/default_space"
-          app:cardElevation="@dimen/card_default_elevation"
-          app:layout_constraintTop_toBottomOf="@id/textView_amountTitle">
-
-          <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-              android:id="@+id/textView_amount"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginStart="@dimen/default_space"
-              android:text="Rp."
-              android:textSize="@dimen/default_text_size" />
-
-            <EditText
-              android:id="@+id/editText_transactionAmount"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="@dimen/medium_space"
-              android:layout_marginBottom="@dimen/medium_space"
-              android:background="@null"
-              android:digits="0123456789"
-              android:gravity="top"
-              android:inputType="number"
-              android:lines="1"
-              android:minLines="1"
-              android:padding="@dimen/medium_space"
-              android:textSize="@dimen/default_text_size"
-              tools:hint="" />
-
-          </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-          android:id="@+id/textView_dateTitle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/text_default_start_margin"
-          android:layout_marginTop="@dimen/default_space"
-          android:layout_marginEnd="@dimen/default_space"
-          android:layout_marginBottom="@dimen/default_space"
-          android:text="@string/transaction_date"
-          android:textSize="@dimen/default_text_size"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@id/cardView_amount" />
-
-        <androidx.cardview.widget.CardView
-          android:id="@+id/cardView_date"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="@dimen/default_space"
-          android:layout_marginTop="@dimen/medium_space"
-          android:layout_marginEnd="@dimen/default_space"
-          app:cardCornerRadius="@dimen/default_space"
-          app:cardElevation="@dimen/card_default_elevation"
-          app:layout_constraintTop_toBottomOf="@id/textView_dateTitle">
-
-          <DatePicker
-            android:id="@+id/datePicker_transactionDater"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner" />
-
-        </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
           android:id="@+id/cardView_actionSave"
           android:layout_width="match_parent"
@@ -237,38 +267,17 @@
           app:cardBackgroundColor="@color/colorEmerald"
           app:cardCornerRadius="@dimen/card_default_corner_radius"
           app:cardElevation="@dimen/no_space"
-          app:layout_constraintTop_toBottomOf="@id/cardView_date">
+          app:layout_constraintTop_toBottomOf="@id/cardView_officeAddress">
 
           <TextView
             android:id="@+id/textView_actionSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="@string/action_save"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/default_text_size"
             tools:text="Save" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-          android:id="@+id/cardView_actionDelete"
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/card_default_height"
-          android:layout_margin="@dimen/default_space"
-          app:cardBackgroundColor="@color/colorAccent"
-          app:cardCornerRadius="@dimen/card_default_corner_radius"
-          app:cardElevation="@dimen/no_space"
-          app:layout_constraintTop_toBottomOf="@id/cardView_actionSave">
-
-          <TextView
-            android:id="@+id/textView_actionDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/action_delete"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/default_text_size"
-            tools:text="Hapus" />
 
         </androidx.cardview.widget.CardView>
 

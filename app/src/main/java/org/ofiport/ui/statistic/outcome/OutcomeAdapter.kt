@@ -3,7 +3,6 @@ package org.ofiport.ui.statistic.outcome
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -40,9 +39,9 @@ class OutcomeAdapter(private val context: Context) :
     fun bind(transaction: Transaction) {
       binding.apply {
         if (transaction.type == 0) {
-          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_lineofficestaff)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_line_office_staff)
         } else {
-          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_lineofficestaff)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_line_investation)
         }
 
         textViewDescriptionTransactionItem.text = transaction.description

@@ -1,55 +1,55 @@
 <resources>
   <string name="app_name">Ofiport</string>
-  <string name="landing_greeting">Salam</string>
-  <string name="landing_balance_title">Saldo Tersedia</string>
   <string name="landing_settings">Settings</string>
-  <string name="landing_action_title">Aksi Cepat</string>
-  <string name="landing_overview_report">Income</string>
-  <string name="landing_create_transaction">Buat Transaksi</string>
-  <string name="landing_statistics_title">Statistik</string>
+  <string name="landing_statistics_title">Statistics</string>
+  <string name="landing_monthly_report">Monthly</string>
   <string name="landing_income">Income</string>
-  <string name="landing_outcome">Expand</string>
-  <string name="landing_recent_transactions_title">Transaksi Terbaru</string>
+  <string name="landing_outcome">Outcome</string>
+  <string name="landing_recent_transactions_title">Recent Transactions</string>
 
-  <string name="transaction_create">Buat Transaksi</string>
-  <string name="transaction_update">Perbarui Transaksi</string>
-  <string name="transaction_type">Tipe</string>
-  <string name="transaction_description">Deskripsi</string>
-  <string name="transaction_amount">Jumlah</string>
-  <string name="transaction_date">Tanggal</string>
+  <string name="monthly_report">Monthly Report</string>
+
+  <string name="transaction_update">Update Transaction</string>
+  <string name="transaction_type">Type</string>
+  <string name="transaction_description">Description</string>
+  <string name="transaction_amount">Amount</string>
+  <string name="transaction_date">Date</string>
 
   <string name="transaction_income_create">Create Income Report</string>
-  <string name="transaction_expense">Create Expense Report</string>
-  <string name="report">Overview Report</string>
+  <string name="transaction_outcome_create">Create Outcome Report</string>
 
   <!--  Months-->
-  <string name="january">Januari</string>
-  <string name="february">Februari</string>
-  <string name="march">Maret</string>
+  <string name="january">January</string>
+  <string name="february">February</string>
+  <string name="march">March</string>
   <string name="april">April</string>
-  <string name="may">Mei</string>
-  <string name="june">Juni</string>
-  <string name="july">Juli</string>
-  <string name="august">Agustus</string>
+  <string name="may">May</string>
+  <string name="june">June</string>
+  <string name="july">July</string>
+  <string name="august">August</string>
   <string name="september">September</string>
-  <string name="october">Oktober</string>
+  <string name="october">October</string>
   <string name="november">November</string>
-  <string name="december">Desember</string>
+  <string name="december">December</string>
 
-  <string name="not_available_value">N/a</string>
+  <string name="action_save">Save</string>
+  <string name="action_update">Update</string>
+  <string name="action_export_all">Export All</string>
+  <string name="action_export_this_month">Export Current Month</string>
+  <string name="action_delete">Remove</string>
+  <string name="action_open_profile">Open Profile</string>
 
-  <string name="action_save">Simpan</string>
-  <string name="action_update">Perbarui</string>
-  <string name="action_export_all">Export Semua</string>
-  <string name="action_export_this_month">Export Bulan Ini</string>
-  <string name="action_delete">Hapus</string>
+  <string name="dialog_incomplete_profile_title">Please complete your profile</string>
+  <string name="dialog_incomplete_profile_subtitle">Complete profile helps us maintain your data properly.</string>
+
   <string name="title_home">What do you need?</string>
   <string name="desc_title_home">Record your office finance down here</string>
-  <!-- TODO: Remove or change this placeholder text -->
-  <string name="hello_blank_fragment">Hello blank fragment</string>
-  <string name="profile_typeOfBusiness">Industry</string>
-  <string name="profile_emailAddress">office@bahanakarya.com</string>
-  <string name="profile_numOfEmployee">50 Employees</string>
-  <string name="profile_officeName">PT. Bahana Karya</string>
-  <string name="profile_pictureDescription">profile picture</string>
+
+  <string name="profile">Office Profile</string>
+  <string name="profile_name">Office Name</string>
+  <string name="profile_email">Office Email</string>
+  <string name="profile_industry">Industry Type</string>
+  <string name="profile_address">Office Address</string>
+  <string name="profile_employee">Employee Amount</string>
+  <string name="profile_picture_description">profile picture</string>
 </resources>

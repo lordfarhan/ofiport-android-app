@@ -12,7 +12,7 @@ class MultipleToggleSwitch(context: Context, attrs: AttributeSet?) :
   BaseToggleSwitch(context, attrs) {
   private val mCheckedPositions: MutableSet<Int>
 
-  constructor(context: Context) : this(context, null) {}
+  constructor(context: Context) : this(context, null)
 
   fun setCheckedTogglePosition(position: Int) {
     mCheckedPositions.add(position)

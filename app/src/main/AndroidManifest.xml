@@ -25,6 +25,8 @@
     <activity android:name=".ui.overview.OverviewActivity" />
     <activity android:name=".ui.statistic.StatisticActivity" />
     <activity android:name=".ui.transaction.TransactionActivity" />
+    <activity android:name=".ui.profile.ProfileActivity" />
+    <activity android:name=".ui.profile.ProfileEditActivity" />
   </application>
 
 </manifest>

@@ -22,6 +22,9 @@ class TransactionActivity : AppCompatActivity() {
 
   companion object {
     const val TRANSACTION = "org.ofiport.data.Transaction"
+    const val TYPE = "type"
+    const val INCOME = "income"
+    const val OUTCOME = "outcome"
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,7 +72,13 @@ class TransactionActivity : AppCompatActivity() {
     } else {
       binding.apply {
         cardViewActionDelete.visibility = View.GONE
-        textViewActionBarTitle.text = resources.getString(R.string.transaction_create)
+        if (intent.getStringExtra(TYPE) == INCOME) {
+          textViewActionBarTitle.text = resources.getString(R.string.transaction_income_create)
+          toggleSwitchType.setCheckedTogglePosition(1)
+        } else {
+          textViewActionBarTitle.text = resources.getString(R.string.transaction_outcome_create)
+          toggleSwitchType.setCheckedTogglePosition(0)
+        }
         textViewActionSave.text = resources.getString(R.string.action_save)
       }
     }

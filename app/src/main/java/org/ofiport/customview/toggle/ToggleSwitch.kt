@@ -11,7 +11,7 @@ class ToggleSwitch(context: Context, attrs: AttributeSet?) :
   BaseToggleSwitch(context, attrs) {
   private var mCheckedTogglePosition = 0
 
-  constructor(context: Context) : this(context, null) {}
+  constructor(context: Context) : this(context, null)
 
   fun getCheckedTogglePosition(): Int {
     return mCheckedTogglePosition

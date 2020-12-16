@@ -1,20 +1,26 @@
 package org.ofiport.ui.landing
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import kotlinx.android.synthetic.main.dialog_incomplete_profile.view.*
 import org.ofiport.R
 import org.ofiport.data.Transaction
 import org.ofiport.databinding.ActivityLandingBinding
 import org.ofiport.helper.DateTimeHelper
 import org.ofiport.helper.ItemDecorationHelper
 import org.ofiport.ui.overview.OverviewActivity
+import org.ofiport.ui.profile.ProfileActivity
 import org.ofiport.ui.statistic.StatisticActivity
 import org.ofiport.ui.transaction.TransactionActivity
-import java.text.NumberFormat
+import org.ofiport.util.OFFICE_NAME
+import org.ofiport.util.SharedPreferenceUtils
 import java.util.*
 
 
@@ -27,6 +33,7 @@ class LandingActivity : AppCompatActivity() {
   private lateinit var binding: ActivityLandingBinding
   private lateinit var viewModel: LandingViewModel
   private lateinit var adapter: LandingAdapter
+  private lateinit var sharedPreferenceUtil: SharedPreferenceUtils
 
   companion object {
     const val CREATE_REQUEST = 0
@@ -46,24 +53,55 @@ class LandingActivity : AppCompatActivity() {
 
     binding = DataBindingUtil.setContentView(this, R.layout.activity_landing)
     viewModel = ViewModelProvider(this).get(LandingViewModel::class.java)
+    sharedPreferenceUtil = SharedPreferenceUtils(this)
 
+    checkIsProfileIncomplete()
 
     binding.apply {
-      cardViewOverviewReport.setOnClickListener {
+      imageViewActionProfile.setOnClickListener {
+        startActivity(
+          Intent(
+            this@LandingActivity,
+            ProfileActivity::class.java
+          )
+        )
+      }
+
+      cardViewAddIncome.setOnClickListener {
+        startActivityForResult(
+          Intent(
+            this@LandingActivity,
+            TransactionActivity::class.java
+          ).putExtra(TransactionActivity.TYPE, TransactionActivity.INCOME),
+          CREATE_REQUEST
+        )
+      }
+
+      cardViewAddOutcome.setOnClickListener {
+        startActivityForResult(
+          Intent(
+            this@LandingActivity,
+            TransactionActivity::class.java
+          ).putExtra(TransactionActivity.TYPE, TransactionActivity.OUTCOME),
+          CREATE_REQUEST
+        )
+      }
+
+      cardViewOpenStatistics.setOnClickListener {
+        startActivity(
+          Intent(
+            this@LandingActivity,
+            StatisticActivity::class.java
+          )
+        )
+      }
+
+      cardViewOpenMonthReport.setOnClickListener {
         startActivity(
           Intent(
             this@LandingActivity,
             OverviewActivity::class.java
           )
-        )
-      }
-      cardViewCreateReport.setOnClickListener {
-        startActivityForResult(
-          Intent(
-            this@LandingActivity,
-            TransactionActivity::class.java
-          ),
-          CREATE_REQUEST
         )
       }
 
@@ -78,6 +116,44 @@ class LandingActivity : AppCompatActivity() {
       )
     }
 
+    subscribeInterface()
+  }
+
+  override fun onRestart() {
+    super.onRestart()
+    checkIsProfileIncomplete()
+  }
+
+  override fun onResume() {
+    super.onResume()
+    checkIsProfileIncomplete()
+  }
+
+  private fun checkIsProfileIncomplete() {
+    if (sharedPreferenceUtil.getString(OFFICE_NAME).isEmpty()) {
+      showIncompleteProfileDialog()
+    }
+  }
+
+  private fun showIncompleteProfileDialog() {
+    val builder = AlertDialog.Builder(this)
+    val dialogView = layoutInflater.inflate(R.layout.dialog_incomplete_profile, null)
+    builder.setView(dialogView)
+    val alertDialog = builder.show()
+    alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+    dialogView.materialButton_actionOpenProfile.setOnClickListener {
+      startActivity(
+        Intent(this, ProfileActivity::class.java)
+      )
+    }
+    alertDialog.setOnDismissListener {
+      startActivity(
+        Intent(this, ProfileActivity::class.java)
+      )
+    }
+  }
+
+  private fun subscribeInterface() {
     viewModel.get().observe(this, {
       if (it.size > 10)
         adapter.submitList(it.take(10))
@@ -93,7 +169,6 @@ class LandingActivity : AppCompatActivity() {
         }
       }
     })
-
   }
 
   override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -126,10 +201,10 @@ class LandingActivity : AppCompatActivity() {
       } else {
         if (data.getStringExtra(ACTION) == "delete") {
           viewModel.delete(transaction)
-          Toast.makeText(this, "Berhasil menghapus", Toast.LENGTH_SHORT).show()
+          Toast.makeText(this, "Successfully deleted", Toast.LENGTH_SHORT).show()
         } else {
           viewModel.update(transaction)
-          Toast.makeText(this, "Berhasil memperbarui", Toast.LENGTH_SHORT).show()
+          Toast.makeText(this, "Successfully updated", Toast.LENGTH_SHORT).show()
         }
       }
     }

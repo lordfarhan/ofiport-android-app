@@ -17,8 +17,7 @@ class ToggleSwitchButton(private var view: View) {
 
   constructor(context: Context?) : this(
     LayoutInflater.from(context).inflate(R.layout.item_widget_toggle_switch, null)
-  ) {
-  }
+  )
 
   fun getView(): View {
     return view

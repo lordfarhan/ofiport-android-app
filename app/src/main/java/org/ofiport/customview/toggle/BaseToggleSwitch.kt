@@ -53,7 +53,7 @@ abstract class BaseToggleSwitch(context: Context, attrs: AttributeSet?) :
   private var mLabels: ArrayList<String>? = null
   private var mContext: Context? = null
 
-  constructor(context: Context) : this(context, null) {}
+  constructor(context: Context) : this(context, null)
 
   // *************** GETTERS AND SETTERS ****************
   fun getActiveBgColor(): Int {
@@ -210,7 +210,7 @@ abstract class BaseToggleSwitch(context: Context, attrs: AttributeSet?) :
   protected fun setColors(toggleSwitchButton: ToggleSwitchButton, bgColor: Int, textColor: Int) {
     val sd = ShapeDrawable(buildRect(toggleSwitchButton))
     sd.paint.color = bgColor
-    toggleSwitchButton.getView().setBackground(sd)
+    toggleSwitchButton.getView().background = sd
     toggleSwitchButton.getTextView().setTextColor(textColor)
   }
 

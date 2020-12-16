@@ -4,15 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.ofiport.R
-import org.ofiport.activity.MainActivity
 import org.ofiport.data.Transaction
 import org.ofiport.databinding.ItemTransactionBinding
-import org.ofiport.fragment.LandingFragment
 import org.ofiport.helper.DateTimeHelper
 import org.ofiport.ui.transaction.TransactionActivity
 import java.text.NumberFormat
@@ -44,9 +41,9 @@ class LandingAdapter(private val context: Context) :
     fun bind(transaction: Transaction) {
       binding.apply {
         if (transaction.type == 0) {
-          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_lineofficestaff)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_line_office_staff)
         } else {
-          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_lineinvestation)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_line_investation)
         }
 
         textViewDescriptionTransactionItem.text = transaction.description
@@ -65,9 +62,9 @@ class LandingAdapter(private val context: Context) :
             TransactionActivity::class.java
           )
           intent.putExtra(TransactionActivity.TRANSACTION, transaction)
-          (context as MainActivity).startActivityForResult(
+          (context as LandingActivity).startActivityForResult(
             intent,
-            MainActivity.UPDATE_REQUEST
+            LandingActivity.UPDATE_REQUEST
           )
         }
       }
