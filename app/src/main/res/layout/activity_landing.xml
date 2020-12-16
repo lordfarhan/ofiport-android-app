@@ -10,7 +10,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+      android:layout_height="wrap_content"
+      android:background="@color/colorWhite">
 
       <ImageView
         android:id="@+id/imageView_actionProfile"
@@ -119,7 +120,6 @@
                   android:layout_width="@dimen/icon_64"
                   android:layout_height="@dimen/icon_64"
                   android:layout_margin="@dimen/medium_space"
-                  app:cardBackgroundColor="@color/design_default_color_on_primary"
                   app:cardCornerRadius="32dp"
                   app:cardElevation="@dimen/card_default_elevation"
                   app:layout_constraintTop_toBottomOf="@id/textView_descTitleHome">
@@ -165,7 +165,6 @@
                   android:layout_width="@dimen/icon_64"
                   android:layout_height="@dimen/icon_64"
                   android:layout_margin="@dimen/medium_space"
-                  app:cardBackgroundColor="@color/design_default_color_on_primary"
                   app:cardCornerRadius="32dp"
                   app:cardElevation="@dimen/card_default_elevation"
                   app:layout_constraintTop_toBottomOf="@id/textView_descTitleHome">
@@ -211,7 +210,6 @@
                   android:layout_width="@dimen/icon_64"
                   android:layout_height="@dimen/icon_64"
                   android:layout_margin="@dimen/medium_space"
-                  app:cardBackgroundColor="@color/design_default_color_on_primary"
                   app:cardCornerRadius="32dp"
                   app:cardElevation="@dimen/card_default_elevation"
                   app:layout_constraintTop_toBottomOf="@id/linearLayout_quickAction">
@@ -257,7 +255,6 @@
                   android:layout_width="@dimen/icon_64"
                   android:layout_height="@dimen/icon_64"
                   android:layout_margin="@dimen/medium_space"
-                  app:cardBackgroundColor="@color/design_default_color_on_primary"
                   app:cardCornerRadius="32dp"
                   app:cardElevation="@dimen/card_default_elevation"
                   app:layout_constraintTop_toBottomOf="@id/linearLayout_quickAction">

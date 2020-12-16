@@ -40,9 +40,9 @@ class IncomeAdapter(private val context: Context) :
     fun bind(transaction: Transaction) {
       binding.apply {
         if (transaction.type == 0) {
-          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_line_office_staff)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_expense)
         } else {
-          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_line_investation)
+          imageViewTypeTransactionItem.setImageResource(R.drawable.ic_income)
         }
 
         textViewDescriptionTransactionItem.text = transaction.description

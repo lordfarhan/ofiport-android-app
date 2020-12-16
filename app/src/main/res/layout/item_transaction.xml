@@ -32,14 +32,12 @@
 
         <ImageView
           android:id="@+id/imageView_typeTransactionItem"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:layout_marginStart="@dimen/medium_space"
-          android:layout_marginTop="@dimen/medium_space"
-          android:layout_marginBottom="@dimen/medium_space"
-          android:src="@drawable/ic_line_office_staff"
+          android:layout_width="@dimen/icon_36"
+          android:layout_height="@dimen/icon_36"
+          android:layout_gravity="center"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
+          app:layout_constraintTop_toTopOf="parent"
+          app:tint="@color/colorTextDark" />
 
       </androidx.cardview.widget.CardView>
 
