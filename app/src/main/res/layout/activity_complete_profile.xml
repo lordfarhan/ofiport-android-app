@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorWhite"
+      app:elevation="@dimen/no_space">
+
+      <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+          android:id="@+id/imageView_actionBack"
+          android:layout_width="@dimen/icon_36"
+          android:layout_height="@dimen/icon_36"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="@dimen/medium_space"
+          android:padding="@dimen/small_space"
+          android:src="@drawable/ic_baseline_arrow_back"
+          app:tint="@color/colorTextDark" />
+
+        <TextView
+          style="@style/TextAppearance.MaterialComponents.Body1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="@string/landing_overview_report"
+          tools:text="Overview Report" />
+
+        <ImageView
+          android:id="@+id/imageView_actionOption"
+          android:layout_width="@dimen/icon_36"
+          android:layout_height="@dimen/icon_36"
+          android:layout_gravity="center_vertical|end"
+          android:layout_marginEnd="@dimen/medium_space"
+          android:padding="@dimen/small_space"
+          android:src="@drawable/ic_baseline_more_vert"
+          app:tint="@color/colorTextDark" />
+
+      </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
